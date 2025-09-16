@@ -37,7 +37,7 @@ go run main.go -years input.csv output.png
 ### With Custom Title
 
 ```bash
-go run main.go -title "Lionel Messi's Career" messi_example.csv messi_lifeline.png
+go run main.go -title "Messi's Career" examples/messi_example.csv examples/messi_lifeline.png
 ```
 
 ### Combined Options
@@ -57,7 +57,6 @@ go run main.go -h
 Create a CSV file with the following format:
 
 ```csv
-year,value,label
 1987,0,Lionel Messi is born in Rosario
 2000,3,Joins FC Barcelona's youth academy
 2004,5,Makes professional debut with Barcelona
@@ -134,13 +133,25 @@ go run main.go personal_data.csv my_timeline.png
 
 Creates a clean timeline with default title "My Life Line", focused on events without year distractions.
 
-### Timeline with Years
+### Timeline with Years and Custom Title
 
 ```bash
-go run main.go -years -title "Career Progression" career.csv career_timeline.png
+go run main.go -years -title "Messi's Career" examples/messi_example.csv examples/messi_timeline_with_years.png
 ```
 
 Creates a timeline with year references and custom title, suitable for resumes or academic presentations.
+
+### Sample Output
+
+The repository includes example output for Lionel Messi's career timeline:
+
+**Clean Timeline (no years):**
+![Messi Lifeline](examples/messi_lifeline.png)
+
+**Timeline with Years:**
+![Messi Lifeline with Years](examples/messi_lifeline_with_years.png)
+
+These examples demonstrate the density-based spacing algorithm working with Messi's peak years (2008-2016) getting expanded visual space, while early career and recent events maintain natural spacing.
 
 ## Debugging
 
@@ -170,12 +181,17 @@ This information helps you understand how the automatic spacing algorithms are w
 
 ```
 lifeline/
-├── main.go           # Main application code
-├── input.csv         # Sample input data
-├── output.png        # Generated timeline image
-├── go.mod            # Go module definition
-├── go.sum            # Go module checksums
-└── README.md         # This file
+├── main.go                      # Main application code
+├── examples/                    # Example files directory
+│   ├── messi_example.csv        # Example input data (Messi's career)
+│   ├── messi_lifeline.png       # Example output (clean timeline)
+│   └── messi_lifeline_with_years.png # Example output (with years)
+├── input.csv                    # Your personal input data (gitignored)
+├── output.png                   # Your generated timeline (gitignored)
+├── go.mod                       # Go module definition
+├── go.sum                       # Go module checksums
+├── .gitignore                   # Git ignore file
+└── README.md                    # This file
 ```
 
 ## Contributing
