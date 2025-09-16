@@ -1,0 +1,41 @@
+# Personal data files
+input.csv
+output.png
+output_with_years.png
+
+# Keep example files (don't ignore these)
+# messi_example.csv
+# messi_lifeline.png  
+# messi_lifeline_with_years.png
+
+# Go build artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Go workspace file
+go.work
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
